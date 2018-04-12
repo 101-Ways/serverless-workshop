@@ -1,5 +1,27 @@
 # Serverless workshop
 
+## Prerequisites
+
+### AWS Account
+
+In order to complete this workshop you'll need an AWS Account with access to create AWS IAM, DynamoDB, Lambda, and API Gateway resources. The code and instructions in this workshop assume only one student is using a given AWS account at a time. If you try sharing an account with another student, you'll run into naming conflicts for certain resources. You can work around these by appending a unique suffix to the serverless service name, but the instructions do not provide details on the changes required to make this work.
+
+All of the resources you will launch as part of this workshop are eligible for the AWS free tier if your account is less than 12 months old. See the [AWS Free Tier page](https://aws.amazon.com/free/) for more details.
+
+### Node.js
+
+You need Node.js 8.10 or later LTS installed on your system. See the [Node.js website](https://nodejs.org/en/) for more details.
+
+### Browser
+
+We recommend you use the latest version of Chrome or Firefox when testing the web application UI.
+
+### Text Editor
+
+You will need a local text editor for making minor updates to configuration files.
+
+# Workshop (sorry, more like tutorial)
+
 ## Step 1: Create Serverless application
 
 ### Create your NPM project
@@ -134,27 +156,20 @@ const offlineFix = asyncHandler => (event, context, callback) =>
     result => callback(null, result),
     error => callback(error)
   );
-
 ```
 
-## Step 4: Create API with DynamoDB
+Or better yet, use framework like `middy` where you will also get schema validation, error handling, and more: https://github.com/middyjs/middy
+
+## Step 4: Create API
+
+<img src="http://i0.kym-cdn.com/photos/images/newsfeed/000/572/078/d6d.jpg"/>
 
 You can install `aws-sdk` as dev dependency: it's already available to you from Node.js runtime in AWS Lambda, you don't need to include it in your deployment package.
 
 `npm install --save-dev aws-sdk`
 
-...
+### Your task:
 
-Update your `serverless.yml`:
-
-```yml
-provider:
-  #...
-  stage: dev
-  region: us-east-1
-```
-
-# Further reading
-
-* [Custom authorizers](https://aws.amazon.com/blogs/compute/introducing-custom-authorizers-in-amazon-api-gateway/)
-* 
+* Create DynamoDB in your `serverless.yml` (See [CF docs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) or [Serverless docs](https://serverless.com/framework/docs/providers/aws/guide/serverless.yml/))
+* Create API to accept POST `/questions` with question text `{ "text": "What is capital of Lithuania?", "hint": "Sounds like 'will' and 'news'" }`, that returns newly created question id
+* Validate schema using middy
