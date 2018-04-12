@@ -36,9 +36,37 @@ More information and list of supported templates available in Serverless Framewo
 
   `"private": true,`
 
-## Step 2: Deploy
+## Step 2: Deploy an API
 
-First make sure you authenticated with AWS.
+### Setup API Gateway for your lambda
+
+In _serverless.yml_ add http event for your lambda function:
+
+```
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /hello
+          method: get
+```
+
+### Set AWS credentials
+
+If you have AWS CLI installed, run:
+
+```
+$ aws configure
+AWS Access Key ID [None]: ...
+AWS Secret Access Key [None]: ...
+Default region name [None]: eu-west-1
+Default output format [None]: json
+```
+
+Alternatively you can set access key and secret via Environment variables: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_REGION`.
+
+### Deploy
 
 `npm run sls -- deploy`
 
