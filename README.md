@@ -205,6 +205,8 @@ If you want to remove CloudFormation stack, you can simply run:
 
 The only thing remaining will be S3 bucket where Serverless Framework kept deployment packages.
 
+You can also go to AWS Console website and delete CloudFormation stack from there. Still: don't forget to clean up S3 buckets.
+
 ## Step 4: Create API
 
 ![owl](https://github.dev.global.tesco.org/storage/user/2885/files/01aa54c4-3e59-11e8-8ae2-e8a3db08aa2d)
