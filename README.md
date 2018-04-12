@@ -15,7 +15,8 @@
 Add `sls` script to _package.json_:
 ```
   "scripts": {
-    "sls": "serverless"
+    "sls": "serverless",
+    ...
   },
 ```
 
