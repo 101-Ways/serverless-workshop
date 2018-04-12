@@ -147,18 +147,52 @@ provider:
   runtime: nodejs8.10
 ```
 
-However, there is currently a bug in `serverless-offline` where it does not handle async handler well. You can add this simple wrapper fix to work around it:
+You can now refactor your handler to be **async**. However, there is currently a bug in `serverless-offline` where it does not handle async handler well. You can add this simple wrapper fix to work around it. Here is how your `handler.js` could look like:
 
 ```js
+const hello = async (event, context) => {
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      message: 'Go Serverless v1.0! Your function executed successfully!',
+      input: event,
+    }),
+  };
+};
+
 // Workaround for serverless-offline bug on async handlers: https://github.com/dherault/serverless-offline/issues/384
 const offlineFix = asyncHandler => (event, context, callback) => 
   asyncHandler(event, context).then(
     result => callback(null, result),
     error => callback(error)
   );
+
+module.exports = { hello: offlineFix(hello) };
 ```
 
 Or better yet, use framework like `middy` where you will also get schema validation, error handling, and more: https://github.com/middyjs/middy
+
+
+```js
+const middy = require("middy");
+const { httpErrorHandler, jsonBodyParser } = require('middy/middlewares')
+
+const hello = async (event, context) => {
+  return {
+    statusCode: 200,
+    body: JSON.stringify({
+      message: 'Go Serverless v1.0! Your function executed successfully!',
+      input: event,
+    }),
+  };
+};
+
+module.exports = {
+  hello: middy(hello)
+    .use(jsonBodyParser())
+    .use(httpErrorHandler())
+}
+```
 
 ## Step 4: Create API
 
