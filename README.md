@@ -162,7 +162,7 @@ Or better yet, use framework like `middy` where you will also get schema validat
 
 ## Step 4: Create API
 
-<img src="http://i0.kym-cdn.com/photos/images/newsfeed/000/572/078/d6d.jpg"/>
+![owl](https://github.dev.global.tesco.org/storage/user/2885/files/01aa54c4-3e59-11e8-8ae2-e8a3db08aa2d)
 
 You can install `aws-sdk` as dev dependency: it's already available to you from Node.js runtime in AWS Lambda, you don't need to include it in your deployment package.
 
