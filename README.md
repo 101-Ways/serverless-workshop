@@ -26,6 +26,8 @@ You will need a local text editor for making minor updates to configuration file
 
 ### Create your NPM project
 
+**Note: These commands will create project files directly in your active directory.**
+
 `npm init`
 
 ### Add Serverless Framework as local dependency
