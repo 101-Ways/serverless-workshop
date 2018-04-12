@@ -172,6 +172,9 @@ module.exports = { hello: offlineFix(hello) };
 
 Or better yet, use framework like `middy` where you will also get schema validation, error handling, and more: https://github.com/middyjs/middy
 
+`$ npm install middy`
+
+> Note: we are installing `middy` as normal dependency so it's deployed with our code.
 
 ```js
 const middy = require("middy");
