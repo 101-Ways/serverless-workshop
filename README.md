@@ -211,7 +211,7 @@ You can also go to AWS Console website and delete CloudFormation stack from ther
 
 ## Step 4: Create API
 
-![owl](https://github.dev.global.tesco.org/storage/user/2885/files/01aa54c4-3e59-11e8-8ae2-e8a3db08aa2d)
+![owl](https://user-images.githubusercontent.com/2464675/38742061-6a8112be-3f33-11e8-9190-b53892bef35d.jpg)
 
 You can install `aws-sdk` as dev dependency: it's already available to you from Node.js runtime in AWS Lambda, you don't need to include it in your deployment package.
 
