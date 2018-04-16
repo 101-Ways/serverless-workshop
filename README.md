@@ -22,7 +22,7 @@ You will need a local text editor for making minor updates to configuration file
 
 # Workshop (sorry, more like tutorial)
 
-## Step 1: Create Serverless application
+## <a name="api"></a>Step 1: Create Serverless application
 
 ### Create your NPM project
 
@@ -222,3 +222,5 @@ You can install `aws-sdk` as dev dependency: it's already available to you from 
 * Create DynamoDB in your `serverless.yml` (See [CF docs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html) or [Serverless docs](https://serverless.com/framework/docs/providers/aws/guide/serverless.yml/))
 * Create API to accept POST `/questions` with question text `{ "text": "What is capital of Lithuania?", "hint": "Sounds like 'will' and 'news'" }`, that returns newly created question id
 * Validate schema using middy
+
+## <a name="react"></a>Step 5. React (TODO)
