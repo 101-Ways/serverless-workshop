@@ -149,10 +149,10 @@ provider:
   runtime: nodejs8.10
 ```
 
-You can now refactor your handler to be **async**. However, there is currently a bug in `serverless-offline` where it does not handle async handler well. You can add this simple wrapper fix to work around it. Here is how your `handler.js` could look like:
+You can now refactor your handler to be **async**. Here is how your `handler.js` could look like:
 
 ```js
-const hello = async (event, context) => {
+async function hello(event, context) {
   return {
     statusCode: 200,
     body: JSON.stringify({
@@ -162,41 +162,7 @@ const hello = async (event, context) => {
   };
 };
 
-// Workaround for serverless-offline bug on async handlers: https://github.com/dherault/serverless-offline/issues/384
-const offlineFix = asyncHandler => (event, context, callback) => 
-  asyncHandler(event, context).then(
-    result => callback(null, result),
-    error => callback(error)
-  );
-
-module.exports = { hello: offlineFix(hello) };
-```
-
-Or better yet, use framework like `middy` where you will also get schema validation, error handling, and more: https://github.com/middyjs/middy
-
-`$ npm install middy`
-
-> Note: we are installing `middy` as normal dependency so it's deployed with our code.
-
-```js
-const middy = require("middy");
-const { httpErrorHandler, jsonBodyParser } = require('middy/middlewares')
-
-const hello = async (event, context) => {
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: 'Go Serverless v1.0! Your function executed successfully!',
-      input: event,
-    }),
-  };
-};
-
-module.exports = {
-  hello: middy(hello)
-    .use(jsonBodyParser())
-    .use(httpErrorHandler())
-}
+module.exports = { hello };
 ```
 
 ## Removing stack
