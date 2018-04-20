@@ -10,6 +10,8 @@ npm run start
 
 Note: Good time to commit.
 
+Another Note: if you have a port clash locally, you can set the `PORT` environment variable to another port.
+
 ## Connect to your service
 
 Lets add some logic to interact with our serverless api:
@@ -26,7 +28,7 @@ Add a lifecycle method to the `App` class to initiate a fetch:
   }
 ```
 
-Note: your local serverless api port
+Note: your local serverless api **PORT**
 
 
 You will also need to add a constructor with an initial state:
@@ -47,6 +49,8 @@ Now lets modify the render method to respond to our state:
 
 ```
   render() {
+    const { data } = this.state
+
     return (
       <div className="App">
         <header className="App-header">
@@ -56,6 +60,8 @@ Now lets modify the render method to respond to our state:
     );
   }
 ```
+
+*Why do this?* We need to update the render method so we can visually see our component render data that has been fetched from our lamda service.
 
 You should now be able to see the message, from your lambda, displayed in your browser.
 
@@ -91,4 +97,5 @@ custom:
 
 - [ ] Build app instructions
 - [ ] Finish Deploy app instructions
+- [ ] simple config for dev vs prod
 - [ ] Dry-run
