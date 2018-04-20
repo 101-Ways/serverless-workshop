@@ -193,3 +193,5 @@ You can install `aws-sdk` as dev dependency: it's already available to you from 
 
 
 ## React
+
+View [instructions](https://github.com/101-Ways/serverless-workshop/tree/master/react) to setup an SPA (with react) and launch with serverless!
