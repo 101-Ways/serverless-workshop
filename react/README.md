@@ -14,7 +14,7 @@ Note: Good time to commit.
 
 Lets add some logic to interact with our serverless api:
 
-Open `src/App`
+Open `src/App.js`
 
 Add a lifecycle method to the `App` class to initiate a fetch:
 
