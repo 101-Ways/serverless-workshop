@@ -190,3 +190,6 @@ You can install `aws-sdk` as dev dependency: it's already available to you from 
 * Validate schema using middy
 
 ## <a name="react"></a>Step 5. React (TODO)
+
+
+## React
