@@ -99,3 +99,4 @@ custom:
 - [ ] Finish Deploy app instructions
 - [ ] simple config for dev vs prod
 - [ ] Dry-run
+- [ ] Further reading ...
