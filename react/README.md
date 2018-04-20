@@ -86,3 +86,9 @@ custom:
     distributionFolder: dist
     indexDocument: index.html
 ```
+
+## TODO
+
+- [ ] Build app instructions
+- [ ] Finish Deploy app instructions
+- [ ] Dry-run
