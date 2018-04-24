@@ -42,4 +42,4 @@ Congratulations! You have successfully successfully created Serverless API proje
 
 ## Completion
 
-You have successfully created Serverless project and tested handler locally. In the next [Deploy API](1_Deploy) module, you will learn more about API Gateway and deploy your first serverless API.
+You have successfully created Serverless project and tested handler locally. In the next [Deploy API](../1_Deploy) module, you will learn more about API Gateway and deploy your first serverless API.
