@@ -29,7 +29,7 @@ This workshop is split up into several modules. You should complete each module 
 ## <a name="api"></a> Serverless API
 
   0. [Create Serverless API project](0_ServerlessProject)
-  1. [Deploy Serverless API](1_DeployServerlessAPI)
+  1. [Deploy Serverless API](1_Deploy)
   2. [Run Serverless API locally (offline)](2_RunOffline)
   
 ## <a name="react"></a> React App
