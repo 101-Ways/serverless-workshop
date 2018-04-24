@@ -1,6 +1,6 @@
 # Serverless workshop
 
-If you are familiar with AWS and Nodejs go to [Serverless Project](0_ServerlessProject) module to begin this workshop.
+If you are familiar with AWS and Nodejs go to [Create Serverless API project](0_ServerlessProject) module to begin this workshop.
 
 ## Prerequisites
 
