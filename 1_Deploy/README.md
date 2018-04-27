@@ -14,6 +14,7 @@ provider:
   stage: dev
   region: eu-west-1
 ```
+User `eu-west-1` or any other AWS region.
 
 ### Setup API Gateway for your lambda
 
@@ -27,6 +28,7 @@ functions:
       - http:
           path: /hello
           method: get
+          cors: true
 ```
 
 ### Set AWS credentials
