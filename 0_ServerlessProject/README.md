@@ -8,19 +8,26 @@
 
 ## Create Serverless project
 
-**Goal:** Create AWS Lambda handler code using `serverless create` command. Invoke function locally to confirm that it returns:
-
-```json
-{
-    "statusCode": 200,
-    "body": "{\"message\":\"Go Serverless v1.0! Your function executed successfully!\",\"input\":\"\"}"
-}
-```
-
-<!-- TODO: Add info about handler result: API Gateway lambda-proxy etc. -->
-
 <details>
 <summary><b>HOW TO create serverless project</b></summary>
+
+Create a directory for your serverless project. `mkdir workshop`
+
+Initialise the project running `npm init`. Name the project accordinly and accept the rest of the defaults.
+
+Lets install the serverless framework in our project.
+
+`npm install --save-dev serverless`
+
+Add `serverless` to the scripts in _package.json_:
+
+```json
+  "scripts": {
+    //...
+    "serverless": "serverless ",
+    //...
+  }
+```
 
 Create nodejs Serverless project using one of the default templates:
 `serverless create --template aws-nodejs`
@@ -37,6 +44,18 @@ Run `invoke local` command:
 
 See more information about `invoke local` command on [CLI documentation](https://serverless.com/framework/docs/providers/aws/cli-reference/invoke-local/) page.
 </details>
+
+
+**Goal:** Create AWS Lambda handler code using `serverless create` command. Invoke function locally to confirm that it returns:
+
+```json
+{
+    "statusCode": 200,
+    "body": "{\"message\":\"Go Serverless v1.0! Your function executed successfully!\",\"input\":\"\"}"
+}
+```
+
+<!-- TODO: Add info about handler result: API Gateway lambda-proxy etc. -->
 
 Congratulations! You have successfully successfully created Serverless API project.
 
