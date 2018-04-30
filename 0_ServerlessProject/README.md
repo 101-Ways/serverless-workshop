@@ -24,7 +24,7 @@ Add `serverless` to the scripts in _package.json_:
 ```json
   "scripts": {
     //...
-    "serverless": "serverless ",
+    "serverless": "serverless",
     //...
   }
 ```
