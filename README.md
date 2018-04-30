@@ -30,7 +30,7 @@ This workshop is split up into several modules. You should complete each module 
   0. [Create Serverless API project](0_ServerlessProject)
   1. [Deploy Serverless API](1_Deploy)
 ## <a name="react"></a> React App
-  2. [Create React app](3_React)
-  3. [Deploy React app](4_React_Deploy)
+  2. [Create React app](2_React)
+  3. [Deploy React app](3_React_Deploy)
   8. [Run Serverless API locally (offline)](8_RunOffline)
   9. After you finished this workshop you can remove all resources that were created by following the [cleanup guide](9_Cleanup).
