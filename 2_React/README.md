@@ -30,7 +30,6 @@ Add a lifecycle method to the `App` class to initiate a fetch:
 
 Note: your local serverless api **PORT**
 
-
 You will also need to add a constructor with an initial state:
 
 ```
@@ -45,7 +44,7 @@ class App extends Component {
 ...
 ```
 
-Now lets modify the render method to respond to our state:
+Now lets replace the render method to respond to our state:
 
 ```
   render() {
@@ -61,7 +60,7 @@ Now lets modify the render method to respond to our state:
   }
 ```
 
-*Why do this?* We need to update the render method so we can visually see our component render data that has been fetched from our lamda service.
+*Why do this?* We need to update the render method so we can visually see our component render data that has been fetched from our lambda service.
 
 You should now be able to see the message, from your lambda, displayed in your browser.
 
@@ -72,7 +71,7 @@ Assuming all is working; Another good moment to commit.
 Lets install a plugin to do the heavy lifting:
 
 ```
-npm install -D serverless-finch
+npm install --save-dev serverless-finch
 ```
 
 We need to update our serverless config so it is aware of the our `serverless-finch` plugin and our configuration on how we want to upload our SPA:

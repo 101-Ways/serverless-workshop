@@ -56,6 +56,7 @@ Or simply add `deploy` script to _package.json_:
     //...
     "deploy": "serverless deploy",
     //...
+  }
 ```
 
 and you will be able to deploy using:
@@ -94,7 +95,6 @@ The special option `--` is used to delimit the end of the options for `npm run` 
 `npm run sls -- invoke local --function hello`
 </details>
 
-
 ## Completion
 
-You have successfully ... In the next []() module, you will ...
+You have successfully ... In the next [Create a React app](../2_React)

@@ -13,7 +13,7 @@
 
 Create a directory for your serverless project. `mkdir workshop`
 
-Initialise the project running `npm init`. Name the project accordinly and accept the rest of the defaults.
+Initialise the project running `npm init`. Name the project accordingly and accept the rest of the defaults.
 
 Lets install the serverless framework in our project.
 
@@ -57,7 +57,7 @@ See more information about `invoke local` command on [CLI documentation](https:/
 
 <!-- TODO: Add info about handler result: API Gateway lambda-proxy etc. -->
 
-Congratulations! You have successfully successfully created Serverless API project.
+Congratulations! You have successfully successfully created a Serverless API project.
 
 ## Completion
 

@@ -27,14 +27,10 @@ You will need a local text editor for making minor updates to configuration file
 This workshop is split up into several modules. You should complete each module before moving to the next one.
 
 ## <a name="api"></a> Serverless API
-
   0. [Create Serverless API project](0_ServerlessProject)
   1. [Deploy Serverless API](1_Deploy)
-  2. [Run Serverless API locally (offline)](2_RunOffline)
-  
 ## <a name="react"></a> React App
-
-  3. [Create React app](react)
-
-
-After you finished this workshop you can remove all resources that were created by following the [cleanup guide](9_Cleanup).
+  2. [Create React app](3_React)
+  3. [Deploy React app](4_React_Deploy)
+  8. [Run Serverless API locally (offline)](8_RunOffline)
+  9. After you finished this workshop you can remove all resources that were created by following the [cleanup guide](9_Cleanup).
