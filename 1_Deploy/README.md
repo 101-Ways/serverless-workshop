@@ -16,7 +16,7 @@ Default output format [None]: json
 
 Or alternatively you can set access key and secret via Environment variables: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_REGION`.
 
-### Setup API Gateway and the lambda integration§
+### Setup API Gateway and the lambda integration
 
 Set default stage and region in _serverless.yml_:
 
