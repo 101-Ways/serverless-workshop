@@ -8,8 +8,6 @@ cd sls-react
 npm run start
 ```
 
-**Hey!** Good time to commit.
-
 ## Connect to your service
 
 Add some logic to your client app to interact with our serverless api.
@@ -75,8 +73,6 @@ Finally, replace the render method to display the fetched data from our state:
 
 You should now be able to see the message, from your lambda, displayed in your browser.
 
-**Assuming all is working;** Another good moment to commit.
-
 ## Build
 
 Ok! Things are working locally. But **It Works On My Machine&trade;** is not good enough. We need to deploy this somewhere ... right? Yes!
@@ -96,7 +92,7 @@ Run the following command to test that your built app will work as expected:
 npx serve --open --single build
 ```
 
-**Great!** Nothing to commit, but we are now ready to deploy 💪!
+**Great!** Ready to deploy 💪!
 
 ## Deploy with Serverless
 
@@ -139,20 +135,17 @@ npm run sls -- plugin install -n serverless-s3-sync
 
 This will update your `package.json` with a new dependency and your `serverless.yml` config will also be updated with a new plugin entry. Check it out!
 
-**Check your `git diff`;** then commit your changes!
-
-
 ## Configure Serverless to upload to S3
 
 Ok we are going to cheat here! Replace your entire `serverless.yml` with the following:
 
 ```
-service: <YOUR CLEINT APP NAME>
+service: <YOUR CLIENT APP NAME>
 
 provider:
   name: aws
   runtime: nodejs6.10
-  region: eu-west-1
+  region: <YOUR DESIRED REGION>
 
 plugins:
   - serverless-s3-sync
@@ -177,7 +170,8 @@ resources:
 ```
 
 **IMPORTANT** You need to make the following changes to the configuration:
-* replace `<YOUR CLEINT APP NAME>`
+* replace `<YOUR DESIRED REGION>` e.g eu-west-1
+* replace `<YOUR CLIENT APP NAME>`
 * replace `<YOUR DESIRED BUCKET NAME>` with a globally unique name
 
 Time to deploy! Run the following command:
@@ -190,6 +184,6 @@ npm run sls -- deploy
 
 No errors `===` **SUCCESS**. You should now be able to access your app at the following url:
 
-`http://<YOUR DESIRED BUCKET NAME>.s3-website-eu-west-1.amazonaws.com`
+`http://<YOUR DESIRED BUCKET NAME>.s3-website-<YOUR DESIRED REGION>.amazonaws.com`
 
 🙌🙌🙌🙌🙌🙌🙌🙌🙌🙌
