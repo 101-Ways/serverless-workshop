@@ -178,7 +178,7 @@ resources:
 
 **IMPORTANT** You need to make the following changes to the configuration:
 * replace `<YOUR CLEINT APP NAME>`
-* replace `<YOUR DESIRED BUCKET NAME>` with a unique name
+* replace `<YOUR DESIRED BUCKET NAME>` with a globally unique name
 
 Time to deploy! Run the following command:
 
