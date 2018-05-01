@@ -93,7 +93,7 @@ Once complete you will see all the files we need to deploy inside the `./build` 
 Run the following command to test that your built app will work as expected:
 
 ```
-npx serve -os build
+npx serve --open --single build
 ```
 
 **Great!** Nothing to commit, but we are now ready to deploy 💪!
