@@ -186,9 +186,9 @@ Time to deploy! Run the following command:
 npm run sls -- deploy
 ```
 
-😅: If you getting an error with your AWS keys please make sure you have your aws credentials setup! Click [here](http://bit.ly/aws-creds-setup) for more information on how to configure or visit http://bit.ly/aws-creds-setup.
+😅: If you get an error from AWS please make sure you have your aws credentials setup and correct permissions! Click [here](http://bit.ly/aws-creds-setup) for more information on how to configure or visit http://bit.ly/aws-creds-setup.
 
-If you did not get an error, you should now be able to access your app at the following url:
+No errors `===` **SUCCESS**. You should now be able to access your app at the following url:
 
 `http://<YOUR DESIRED BUCKET NAME>.s3-website-eu-west-1.amazonaws.com`
 
