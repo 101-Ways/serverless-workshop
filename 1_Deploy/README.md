@@ -27,7 +27,7 @@ In this module we will add HTTP Endpoint for your lambda function and deploy the
     ```
     $ export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
     $ export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-    $ export AWS_DEFAULT_REGION=us-west-2
+    $ export AWS_DEFAULT_REGION=eu-west-1
     ```
 
     _Windows_
@@ -35,7 +35,7 @@ In this module we will add HTTP Endpoint for your lambda function and deploy the
     ```
     > set AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
     > set AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-    > set AWS_DEFAULT_REGION=us-west-2
+    > set AWS_DEFAULT_REGION=eu-west-1
     ```
 </p></details>
 
