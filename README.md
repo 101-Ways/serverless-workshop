@@ -29,6 +29,7 @@ This workshop is split up into several modules. You should complete each module 
 ## <a name="api"></a> Serverless API
   0. [Create Serverless API project](0_ServerlessProject)
   1. [Deploy Serverless API](1_Deploy)
+![api gateway + lambdas](https://cdn-images-1.medium.com/max/1600/1*6lwgFq0ij6-LhQbHWwwVSg.png "ApiGateway + Lambda")
 ## <a name="react"></a> React App
   2. [Create React app](2_React)
   3. [Deploy React app](3_React_Deploy)
