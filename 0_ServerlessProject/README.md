@@ -29,7 +29,11 @@
     cd workshop
     ```
 
-1. Initialise the project running `npm init`. Name the project accordingly and accept the rest of the defaults.
+1. Initialise the project:
+    
+    `npm init`
+    
+    Name the project accordingly and you can accept the rest of the defaults.
 
 1. Install the serverless framework in our project.
 
