@@ -55,7 +55,10 @@
 
 1. Create nodejs Serverless project using one of the default templates:
 
-    `npm run sls -- create --template aws-nodejs`
+    ```
+    npm run sls -- create --template aws-nodejs --path api
+    cd api
+    ```
 
     See more information about `serverless create` command on [CLI documentation](https://serverless.com/framework/docs/providers/aws/cli-reference/create/) page.
 </p></details>
