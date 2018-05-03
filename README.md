@@ -35,3 +35,4 @@ This workshop is split up into several modules. You should complete each module 
   3. [Deploy React app](3_React_Deploy)
   8. [Run Serverless API locally (offline)](8_RunOffline)
   9. After you finished this workshop you can remove all resources that were created by following the [cleanup guide](9_Cleanup).
+![react + s3](https://cdn-images-1.medium.com/max/1600/1*XRkyGeE47qCyDCdowAACwA.png "React hosted on S3")
