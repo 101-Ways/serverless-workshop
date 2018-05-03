@@ -20,18 +20,18 @@
 <!-- TODO: Add info about handler result: API Gateway lambda-proxy etc. -->
 
 <details>
-<summary><b>HOW TO create serverless project</b></summary>
+<summary><b>HOW TO create serverless project</b></summary><p>
 
-0. Create a directory for your serverless project.
+1. Create a directory for your serverless project.
 
     ```
     mkdir workshop
     cd workshop
     ```
 
-0. Initialise the project running `npm init`. Name the project accordingly and accept the rest of the defaults.
+1. Initialise the project running `npm init`. Name the project accordingly and accept the rest of the defaults.
 
-0. Install the serverless framework in our project.
+1. Install the serverless framework in our project.
 
     `npm install --save-dev serverless`
 
@@ -45,21 +45,22 @@
       }
     ```
 
-0. Create nodejs Serverless project using one of the default templates:
+1. Create nodejs Serverless project using one of the default templates:
     `npm run sls -- create --template aws-nodejs`
 
     See more information about `serverless create` command on [CLI documentation](https://serverless.com/framework/docs/providers/aws/cli-reference/create/) page.
-</details>
+</p></details>
 
 <details>
-<summary><b>HOW TO invoke function locally</b></summary>
+<summary><b>HOW TO invoke function locally</b></summary><p>
 
-0. Run `invoke local` command:
+1. Run `invoke local` command:
 
     `npm run sls -- invoke local --function hello`
 
     See more information about `invoke local` command on [CLI documentation](https://serverless.com/framework/docs/providers/aws/cli-reference/invoke-local/) page.
-</details>
+</p></details>
+<p></p>
 
 Congratulations! You have successfully successfully created a Serverless API project.
 
