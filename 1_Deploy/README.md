@@ -66,16 +66,16 @@ In this module we will add HTTP Endpoint for your lambda function and deploy the
               method: get
               cors: true
     ```
-</p></details>
+1. Finally add CORS headers to the handler response function as described below. The reason for this is to allow any origin (including your localhost) to access the service.
 
-2. Finally add CORS headers to the handler function so it looks like thids.
-
-    ```
+    ```javascript
+    statusCode: 200,
     headers: {
-           'Access-Control-Allow-Origin' : '*',
-           'Access-Control-Allow-Credentials' : true
-        }
+       'Access-Control-Allow-Origin' : '*',
+       'Access-Control-Allow-Credentials' : true
+    },
     ```
+</p></details>
 
 <details>
 <summary><b>HOW TO deploy Serverless project</b></summary><p>
