@@ -1,66 +1,102 @@
 # Module 1: Deploying Serverless API
 
-In this module we will deploy the serverless api to AWS.
+In this module we will add HTTP Endpoint for your lambda function and deploy the serverless api to AWS.
 
-### Set AWS credentials
+## Create HTTP endpoint for your Lambda
 
-If you have AWS CLI installed, run:
+**Goal:** Configure HTTP Endpoint trigger for your AWS Lambda function, and deploy to AWS. Open HTTP endpoint url in the browser confirming it returns:
 
 ```
-$ aws configure
-AWS Access Key ID [None]: ...
-AWS Secret Access Key [None]: ...
-Default region name [None]: eu-west-1
-Default output format [None]: json
+{
+    "statusCode": 200,
+    "body": "{\"message\":\"Go Serverless v1.0! Your function executed successfully!\",\"input\":\"...\"}"
+}
 ```
 
-Or alternatively you can set access key and secret via Environment variables: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_REGION`.
+<details>
+<summary><b>HOW TO setup AWS credentials</b></summary><p>
 
-### Setup API Gateway and the lambda integration
+* By using AWS CLI, if you have it installed, by running:
 
-Set default stage and region in _serverless.yml_:
+    `aws configure`
 
-```yml
-provider:
-  #...
-  stage: dev
-  region: eu-west-1
-```
-User `eu-west-1` or any other AWS region.
+* By setting environment variables: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, and `AWS_REGION`
 
-In _serverless.yml_ add http event for your lambda function:
+    _Linux, macOS, or Unix_
 
-```yml
-functions:
-  hello:
-    handler: handler.hello
-    events:
-      - http:
-          path: /hello
-          method: get
-          cors: true
-```
+    ```
+    $ export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+    $ export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+    $ export AWS_DEFAULT_REGION=us-west-2
+    ```
 
-### Deploy
+    _Windows_
 
-`npm run sls -- deploy`
+    ```
+    > set AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+    > set AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+    > set AWS_DEFAULT_REGION=us-west-2
+    ```
+</p></details>
 
-Or simply add `deploy` script to _package.json_:
+<details>
+<summary><b>HOW TO add HTTP Endpoint (trigger) in Serverless project</b></summary><p>
 
-```json
-  "scripts": {
-    //...
-    "deploy": "serverless deploy",
-    //...
-  }
-```
+1. Set default `stage` and `region` in _serverless.yml_:
 
-and you will be able to deploy using:
+    ```yml
+    provider:
+      name: aws
+      runtime: nodejs6.10
+      stage: dev
+      region: eu-west-1
+    ```
 
-`npm run deploy`
+    You can use `eu-west-1` or any other AWS region that support AWS Lambda and API Gateway.
 
-Now try the URL from deployment step results in your terminal. You should be able to hit lambda function you just deployed!
+1. Add HTTP Endpoint as a event trigger for your Lambda function by adding `events` section with `http` trigger in _serverless.yml_:
+
+    ```yml
+    functions:
+      hello:
+        handler: handler.hello
+        events:
+          - http:
+              path: /hello
+              method: get
+              cors: true
+    ```
+</p></details>
+
+
+<details>
+<summary><b>HOW TO deploy Serverless project</b></summary><p>
+
+1. Run `deploy` serverless command:
+
+    `npm run sls -- deploy`
+
+    You can simplify this by adding `deploy` script to your `package.json`:
+
+    ```json
+    "scripts": {
+      "deploy": "serverless deploy",
+      "sls": "serverless"
+    },
+    ```
+
+    Now you can deploy using:
+
+    `npm run deploy`
+
+    See more information about `deploy` command on [CLI documentation](https://serverless.com/framework/docs/providers/aws/cli-reference/deploy/) page.
+    
+1. Open deployed endpoint in the browser confirming it's returning valid response.
+</p></details>
+<p></p>
+
+Congratulations! You have successfully deployed your Lambda function with API Gateway endpoint 
 
 ## Completion
 
-You have successfully ... In the next [Create a React app](../2_React)
+You have successfully deployed serverless API. In the next [Create a React app](../2_React) module you will learn how to create React app.
