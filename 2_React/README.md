@@ -133,7 +133,7 @@ Next install the `serverless-s3-deploy` plugin:
 npm run sls -- plugin install -n serverless-s3-sync
 ```
 
-This will update your `package.json` with a new dependency and your `serverless.yml` config will also be updated with a new plugin entry. Check it out!
+This will update your `serverless.yml` with a new dependency. Check it out!
 
 ## Configure Serverless to upload to S3
 
