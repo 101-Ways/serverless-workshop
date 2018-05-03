@@ -68,6 +68,14 @@ In this module we will add HTTP Endpoint for your lambda function and deploy the
     ```
 </p></details>
 
+2. Finally add CORS headers to the handler function so it looks like thids.
+
+    ```
+    headers: {
+           'Access-Control-Allow-Origin' : '*',
+           'Access-Control-Allow-Credentials' : true
+        }
+    ```
 
 <details>
 <summary><b>HOW TO deploy Serverless project</b></summary><p>
