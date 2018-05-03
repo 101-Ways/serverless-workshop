@@ -35,11 +35,11 @@
 
     `npm install --save-dev serverless`
 
-    Add `sls` to the scripts by editing your _package.json_ to look like this:
+    Add `sls` to npm scripts by editing your _package.json_ so your `scripts` section looks like this:
 
     ```json
       "scripts": {
-        "sls": "serverless",
+        "sls": "serverless"
       },
     ```
     
