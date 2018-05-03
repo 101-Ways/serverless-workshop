@@ -40,13 +40,13 @@ Add `serverless` to the scripts in _package.json_:
 ```json
   "scripts": {
     //...
-    "serverless": "serverless",
+    "sls": "serverless",
     //...
   }
 ```
 
 Create nodejs Serverless project using one of the default templates:
-`npm run serverless -- create --template aws-nodejs`
+`npm run sls -- create --template aws-nodejs`
 
 See more information about `serverless create` command on [CLI documentation](https://serverless.com/framework/docs/providers/aws/cli-reference/create/) page.
 </details>
@@ -56,7 +56,7 @@ See more information about `serverless create` command on [CLI documentation](ht
 
 Run `invoke local` command:
 
-`npm run serverless -- invoke local --function hello`
+`npm run sls -- invoke local --function hello`
 
 See more information about `invoke local` command on [CLI documentation](https://serverless.com/framework/docs/providers/aws/cli-reference/invoke-local/) page.
 </details>
