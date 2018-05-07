@@ -156,15 +156,16 @@ service: <YOUR CLIENT APP NAME>
 
 provider:
   name: aws
-  runtime: nodejs6.10
+  runtime: nodejs8.10
   region: <YOUR DESIRED REGION>
 
 plugins:
   - serverless-s3-sync
 
 custom:
+  bucketName: ${self:service}-assets
   s3Sync:
-    - bucketName: <YOUR DESIRED BUCKET NAME>
+    - bucketName: ${self:custom.bucketName}
       localDir: build/
       acl: public-read
       params:
@@ -175,7 +176,7 @@ resources:
       AssetsBucket:
         Type: AWS::S3::Bucket
         Properties:
-          BucketName: <YOUR DESIRED BUCKET NAME>
+          BucketName: ${self:custom.bucketName}
           AccessControl: PublicRead
           WebsiteConfiguration:
             IndexDocument: index.html
