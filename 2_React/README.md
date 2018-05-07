@@ -1,4 +1,16 @@
-# Setup React App
+# Create Your React App
+
+Now you have a Serverless api setup and running. Lets create our react app.
+
+For simplicity lets back up out of our lambda folder in the terminal:
+
+```
+cd ../
+```
+
+We will build our Serverless react app in a separate folder.
+
+## Setup React App
 
 Install and start your react app:
 
