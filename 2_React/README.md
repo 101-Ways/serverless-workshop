@@ -2,10 +2,10 @@
 
 Now you have a Serverless api setup and running. Lets create our react app.
 
-For simplicity lets back up out of our lambda folder in the terminal:
+Lets back up out of our lambda folder in the terminal, going back to workshop root folder:
 
 ```
-cd ../
+cd ..
 ```
 
 We will build our Serverless react app in a separate folder.
