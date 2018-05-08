@@ -1,3 +1,7 @@
+## Deactivate access keys
+
+Login to AWS Console website, go to IAM user that you created during this workshop and deactivate the access keys. This ensures that access you created for this workshop can't be used anymore.
+
 ## Removing stack
 
 If you want to remove CloudFormation stack, you can simply run:
