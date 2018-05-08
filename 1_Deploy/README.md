@@ -14,6 +14,45 @@ In this module we will add HTTP Endpoint for your lambda function and deploy the
 ```
 
 <details>
+<summary><b>HOW TO create AWS service account</b></summary><p>
+
+<!-- Service account creation steps taken from https://www.thorntech.com/2017/02/aws-tutorial-intro-using-lambda-serverless-framework/  -->
+
+Serverless needs access keys in order to perform actions within your AWS account. So you need to create a service account with a set of access keys.
+
+Perform the following steps within the AWS console:
+
+1. Go to IAM
+1. On the left, select the Users tab
+1. Click the Add user button
+1. For the User name, type serverless
+1. Next to Access type, check the box for Programmatic access
+1. Click the Next: Permissions button
+
+![](https://dnp94fjvlna2x.cloudfront.net/wp-content/uploads/2017/01/iam-create-user.gif)
+
+Using the Add user wizard, you begin the process of creating a service account named serverless. You also select Programmatic access, which generates access keys for you.
+
+Continue with the next section of the Add User wizard.
+
+1. On the Set permissions for serverless page, click Attach existing policies directly
+1. Type AdministratorAccess in the search filter
+1. Check the box next to the AdministratorAccess policy
+1. Click the Next: Review button
+1. On the Review page, click the Create user button
+1. Click the Download .csv button
+1. Click Close
+
+![](https://dnp94fjvlna2x.cloudfront.net/wp-content/uploads/2017/01/iam-admin-access2.gif)
+
+You grant admin privileges to your service account by attaching the AdministratorAccess policy. Once the account is created, you download a CSV file containing the access keys. This is the only chance you get to download these keys.
+
+> Note: In a production environment, you should tailor down access to least privilege. This tutorial uses a blanket admin access policy to keep things simple. Be sure to detach this policy when you’re done.
+
+</p></details>
+
+
+<details>
 <summary><b>HOW TO setup AWS credentials</b></summary><p>
 
 * By using AWS CLI, if you have it installed, by running:
