@@ -182,10 +182,7 @@ resources:
             IndexDocument: index.html
 ```
 
-**IMPORTANT** You need to make the following changes to the configuration:
-* replace `<YOUR DESIRED REGION>` e.g eu-west-1
-* replace `<YOUR CLIENT APP NAME>`
-* replace `<YOUR DESIRED BUCKET NAME>` with a globally unique name
+**IMPORTANT** replace `<YOUR CLIENT APP NAME>`
 
 Time to deploy! Run the following command:
 
